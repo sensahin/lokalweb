@@ -1,0 +1,41 @@
+name: Lokalweb
+options:
+  bundleIdPrefix: com.lokalweb
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.2.0"
+    CURRENT_PROJECT_VERSION: "120"
+    CODE_SIGN_STYLE: Automatic
+targets:
+  Lokalweb:
+    type: application
+    platform: macOS
+    sources:
+      - path: Lokalweb
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lokalweb.app
+        PRODUCT_NAME: Lokalweb
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Lokalweb
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.developer-tools
+        INFOPLIST_KEY_NSHighResolutionCapable: YES
+        ENABLE_APP_SANDBOX: NO
+        ENABLE_HARDENED_RUNTIME: YES
+    scheme:
+      testTargets:
+        - LokalwebTests
+  LokalwebTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: LokalwebTests
+    dependencies:
+      - target: Lokalweb
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lokalweb.tests
+        GENERATE_INFOPLIST_FILE: YES

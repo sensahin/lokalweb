@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible Lokalweb problem
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve Lokalweb. Remove credentials and private local paths from logs before posting.
+  - type: input
+    id: version
+    attributes:
+      label: Lokalweb version
+      placeholder: 1.2.0
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS and Mac architecture
+      placeholder: macOS 14.7, Apple silicon
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Explain the observed behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Paste relevant Lokalweb diagnostics or logs after removing credentials and private paths.
+      render: shell
