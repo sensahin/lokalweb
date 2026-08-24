@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -228,7 +228,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					65FB23154CCBD301F4C3F900 = {
 						ProvisioningStyle = Automatic;
@@ -239,6 +239,7 @@
 				};
 			};
 			buildConfigurationList = 15143F22E22DD241D33B4E26 /* Build configuration list for PBXProject "Lokalweb" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -247,7 +248,6 @@
 			);
 			mainGroup = D40CB08445CD93631D39FE1A;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = EE7A8503D7FDF8749EC2CF2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
